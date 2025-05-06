@@ -1,0 +1,44 @@
+{
+  "name": "svg-sprite-gen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Given a folder of SVGs, it optimizes, inlines, and bundles them into a single SVG-sprite (with <symbol> tags), plus a React hook for easy lookup.",
+  "author": "Ashkan hooshidarashkan@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrashkan/svg-sprite.git"
+  },
+  "homepage": "https://github.com/hrashkan/svg-sprite#readme",
+  "bin": {
+    "svg-sprite-gen": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/cli.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "svg",
+    "sprite",
+    "svg-sprite",
+    "react",
+    "cli",
+    "svgo"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.0",
+    "svgo": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
